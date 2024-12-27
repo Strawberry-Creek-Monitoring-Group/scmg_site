@@ -10,6 +10,7 @@ django-geojson = "==4.1.0"
 django-leaflet = "==0.31.0"
 sqlparse = "==0.5.1"
 typing-extensions = "==4.12.2"
+djangorestframework = "*"
 
 [dev-packages]
 

@@ -15,9 +15,12 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+from .views import ItemList
+from .views import item_create_view
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include('landingapp.urls')),  # Include the URLs from myapp
-
+    path('', include('landingapp.urls')), 
+    path('items/', ItemList.as_view(), name='item_list'),  # Define the URL for your API endpoint
+    path('items/create/', item_create_view, name='item_create'),
 ]
