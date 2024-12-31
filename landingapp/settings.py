@@ -37,4 +37,4 @@ STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'static'),
     os.path.join(BASE_DIR, 'landingapp/static'),
 ]
-
+STATIC_ROOT = 'C:\Users\Computer\Documents\SCMG\scmg_site\landingapp\static'

@@ -29,5 +29,4 @@ def item_create_view(request):
             return redirect('item_list')  # Redirect to a page after saving
     else:
         form = ItemForm()
-
     return render(request, 'item_create.html', {'form': form})

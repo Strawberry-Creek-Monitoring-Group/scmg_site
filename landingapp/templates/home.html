@@ -1,10 +1,31 @@
-{% extends './base.html' %}
+{% extends 'base.html' %}
+
+{% load static %}
 
 {% block extra_head %}
+    <meta charset="UTF-8">
     <title>SCMG Home</title>
+    <link rel="stylesheet" href="{% static 'home_styles.css' %}">
 {% endblock %}
 
 {% block content %}
-    <h1>Welcome to the Home Page</h1>
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae ipsa neque corporis autem inventore repellendus ad odit blanditiis maxime! Facere dolorum, nemo perferendis ipsa quisquam nulla neque obcaecati. Vitae, iure!</p>
+<body>
+    <main>
+        <section class="hero">
+            <h1>Welcome to Strawberry Creek!</h1>
+            <p class="intro-text">
+                Strawberry Creek travels throughout the UC Berkeley Campus, and has been an integral part
+                of our environment since the University's founding in 1868. Home to several endangered/
+                threatened species and native wildlife, Strawberry Creek is an urban watershed teeming with
+                life. It also serves as an educational resource for several courses on campus.
+            </p>
+        </section>
+
+        <section class="image-grid">
+            <div class="image-card"></div>
+            <div class="image-card"></div>
+            <div class="image-card"></div>
+        </section>
+    </main>
+</body>   
 {% endblock %}

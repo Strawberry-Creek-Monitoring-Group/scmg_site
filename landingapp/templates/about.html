@@ -1,121 +1,62 @@
+{% extends 'base.html' %}
 
+{% load static %}
 
-{% extends './base.html' %}
-{% block extra_head %}
-    <title>About SCMG</title>
-    <style>@import url('https://fonts.googleapis.com/css2?family=Kadwa:wght@400;700&display=swap');</style>
+{% block head %}
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Strawberry Creek Monitoring Group</title>
+    <link rel="stylesheet" type="text/css"  href="{% static 'about_styles.css' %}">
 {% endblock %}
 
 {% block content %}
-<!DOCTYPE html>
-<html>
-<head>
-  <title>Strawberry Creek</title>
-  <style>
-
-.kadwa-regular {
-  font-family: "Kadwa", serif;
-  font-weight: 400;
-  font-style: normal;
-}
-
-.kadwa-bold {
-  font-family: "Kadwa", serif;
-  font-weight: 700;
-  font-style: normal;
-}
-.container {
-max-width: 800px;
-margin: 0 auto;
-padding: 20px;
-}
-h1, h2 {
-color: #DE7A00;
-font-family: "Kadwa", serif;
-font-weight: 400;
-font-style: normal;
-}
-img {
-max-width: 100%;
-height: auto;
-display: block;
-margin: 20px 0;
-}
-.work-section {
-background-color: #F0F0F0;
-padding: 20px;
-}
-.work-section h2 {
-margin-top: 0;
-}
-.banner {
-background-color: #f5f5f5;
-padding: 20px 0;
-font-family: Arial, sans-serif;
-color: #5d5d5d;
-}
-.footercontainer {
-max-width: 1200px;
-margin: 0 auto;
-display: flex;
-justify-content: space-between;
-align-items: center;
-}
-.address,
-.contact,
-.sponsor,
-.feedback {
-flex: 1;
-text-align: center;
-}
-.sponsor img {
-max-width: 150px;
-}
-.feedback a {
-color: #5d5d5d;
-text-decoration: none;
-}
-.feedback a:hover {
-color: #3d3d3d;
-}
-</style>
-</head>
 <body>
-    <div class="container">
-        <div>
-          <img src="image1.jpg" alt="Strawberry Creek scene">
-          <h1>Welcome to Strawberry Creek!</h1>
-          <p>Strawberry Creek travels throughout the UC Berkeley Campus, and has been an integral part of our environment since the University's founding in 1868.</p>
-          <p>Home to several endangered/threatened species and native wildlife, Strawberry Creek is an urban watershed that provides a living laboratory for learning about life. It also serves as an educational resource for several courses on campus.</p>
-          <img src="image2.jpg" alt="Strawberry Creek scene">
-          <h2>Who are we?</h2>
-          <p>The Strawberry Creek Monitoring Group was founded in 2017, as an off-shoot of the Strawberry Creek Restoration Project, which began in 2004.</p>
-          <p>We work to understand the ecology of Strawberry Creek through the use of Open-Source Hardware and software from 2004 - 2025, and will be featured by the Green Initiative Fund project in 2023 - 2025. Through this work, the Cal Creeks team program will continue our mission of helping campuses learn and grow with their local watersheds.</p>
-        </div>
-        <div class="work-section">
-          <h2>Our Work</h2>
-          <h3>Oil Sensor Development</h3>
-          <p>In 2019, a significant diesel spill known as the Stanley Hall Spill occurred, causing extensive damage. Much of this damage could have been prevented if the spill had been detected earlier. Currently, there is no reliable oil detection system in place at Strawberry Creek, and existing commercial solutions are prohibitively expensive. As a result, we are aiming to develop our own detection model, one that can address our specific needs but can also be adapted and exported to other schools facing similar challenges.</p>
-          <h3>Live Data Alerts</h3>
-          <p>As part of our efforts to improve the accessibility of spill data, we have implemented a live, web-and data-information system. This system allows both faculty, staff, and community members to easily access real-time spill data. Try out our web app (here: [link]), to stay updated on creek conditions, and us for alerts here!</p>
-          <h3>Community Outreach</h3>
-          <p>-Integrate creek sensors and data into CEE coursework to foster interdisciplinary learning</p>
-          <p>-Host demonstration days on and off campus to showcase sensor deployment and alarm setup, tracking participant feedback.</p>
-          <p>To learn more about these events, check back on the website and follow the Cal Creeks Instagram account!</p>
-          <p>Interested in collaborating with us? Send us a ping! </p>
-     </div>
+    <main>
+        <section id="who-we-are">
+            <h1>Who We Are</h1>
+            <p>The Strawberry Creek Monitoring Group was founded in 2024, as an off-branch of the Strawberry Creek Restoration Project, which began in 1987.</p>
+            <p>We work to understand the ecology of Strawberry Creek through the use of Open-Source hardware and software!</p>
+            <p>During 2024-2025, we will be funded by The Green Initiative Fund - afterwards, the Cal Environmental Initiative will support our mission of helping campuses learn and grow with their local watersheds.</p>
+        </section>
+
+        <section id="our-works">
+            <h2>Our Works</h2>
+            
+            <div class="work-card">
+                <h3>🌿 Oil Sensor Development</h3>
+                <p>In 2023, a significant Creek spill known as the Harvey Hall Diesel spill occurred, causing extensive damage. Much of this damage could have been prevented with proper detection systems.</p>
+                <p>Currently, there is no creek oil detection system in place at Strawberry Creek, and existing commercial options are expensive.</p>
+                <p>As a result, we are aiming to develop our own detection model, one that not only addresses these issues but can also be adapted and expanded to other schools facing similar challenges.</p>
+            </div>
+
+            <div class="work-card">
+                <h3>💻 Live Data Alerts</h3>
+                <p>As part of our efforts to improve the monitoring of Strawberry Creek, we developed a live alerts and data information system.</p>
+                <p>This system allows both faculty users and community members to easily access real-time data.</p>
+                <div class="action-links">
+                    <a href="#" class="btn">View Live Data</a>
+                    <a href="#" class="btn">Sign up for alerts →</a>
+                </div>
+            </div>
+
+            <div class="work-card">
+                <h3>✨ Community Outreach</h3>
+                <div class="outreach-grid">
+                    <div class="outreach-item">
+                        <p>We help integrate creek sensors and data collection with environmental science and interdisciplinary learning.</p>
+                    </div>
+                    <div class="outreach-item">
+                        <p>We host demonstrations days on oil spill prevention and mitigation, and test alarm setup, teaching participants firsthand.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>To learn more about us, check back on the website and follow the Cal Creeks Instagram account!</p>
+        <p class="footnote">Interested in collaborating with us? Send us a ping! :D</p>
+    </footer>
 </body>
-<footer class="banner">
-  <div class="footercontainer">
-    <div class="address">Address</div>
-    <div class="contact">Contact Us</div>
-    <div class="sponsor">
-      <img src="green-initiative-fund-logo.png" alt="<The Green Initiative Fund>">
-    </div>
-    <div class="feedback">
-      <a href="#">Click here and let us know</a>
-    </div>
-  </div>
-</footer>
 </html>
+
 {% endblock %}
