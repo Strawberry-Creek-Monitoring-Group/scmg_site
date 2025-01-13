@@ -8,12 +8,13 @@
 
 body {
     background-color: var(--cream-color);
-    margin: 0px;
+    margin: 0;
+    overflow-x: hidden;
 }
 
 .nav-bar {
     width: 100%;
-    position:  relative;
+    position: relative;
     height: 5vh;
     padding: 10px;
 
@@ -35,9 +36,9 @@ body {
 .nav-bar a {
     position: relative;
     text-decoration: none;
-    padding: 20px;
     color: var(--brown-color);
     font-size: large;
+    font-weight: 400;
     letter-spacing: 0.5px;
 }
 
@@ -61,13 +62,18 @@ body {
 .main {
     position: relative;
     height: 90vh;
-    padding: 20px;
+    margin: 0;
 }
 
 .footer {
     width: 100%;
     height: 10vh;
-    margin: 0px;
     background-color: var(--skyblue-color);
     padding: 20px;
+}
+
+.albert-sans {
+  font-family: "Albert Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
 }
