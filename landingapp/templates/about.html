@@ -1,9 +1,62 @@
-{% extends './base.html' %}
-{% block extra_head %}
-    <title>About SCMG</title>
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block head %}
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Strawberry Creek Monitoring Group</title>
+    <link rel="stylesheet" type="text/css"  href="{% static 'about_styles.css' %}">
 {% endblock %}
 
 {% block content %}
-    <h1>about page</h1>
-    <p>We are scmg 🍓</p>
+<body>
+    <main>
+        <section id="who-we-are">
+            <h1>Who We Are</h1>
+            <p>The Strawberry Creek Monitoring Group was founded in 2024, as an off-branch of the Strawberry Creek Restoration Project, which began in 1987.</p>
+            <p>We work to understand the ecology of Strawberry Creek through the use of Open-Source hardware and software!</p>
+            <p>During 2024-2025, we will be funded by The Green Initiative Fund - afterwards, the Cal Environmental Initiative will support our mission of helping campuses learn and grow with their local watersheds.</p>
+        </section>
+
+        <section id="our-works">
+            <h2>Our Works</h2>
+            
+            <div class="work-card">
+                <h3>🌿 Oil Sensor Development</h3>
+                <p>In 2023, a significant Creek spill known as the Harvey Hall Diesel spill occurred, causing extensive damage. Much of this damage could have been prevented with proper detection systems.</p>
+                <p>Currently, there is no creek oil detection system in place at Strawberry Creek, and existing commercial options are expensive.</p>
+                <p>As a result, we are aiming to develop our own detection model, one that not only addresses these issues but can also be adapted and expanded to other schools facing similar challenges.</p>
+            </div>
+
+            <div class="work-card">
+                <h3>💻 Live Data Alerts</h3>
+                <p>As part of our efforts to improve the monitoring of Strawberry Creek, we developed a live alerts and data information system.</p>
+                <p>This system allows both faculty users and community members to easily access real-time data.</p>
+                <div class="action-links">
+                    <a href="#" class="btn">View Live Data</a>
+                    <a href="#" class="btn">Sign up for alerts →</a>
+                </div>
+            </div>
+
+            <div class="work-card">
+                <h3>✨ Community Outreach</h3>
+                <div class="outreach-grid">
+                    <div class="outreach-item">
+                        <p>We help integrate creek sensors and data collection with environmental science and interdisciplinary learning.</p>
+                    </div>
+                    <div class="outreach-item">
+                        <p>We host demonstrations days on oil spill prevention and mitigation, and test alarm setup, teaching participants firsthand.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>To learn more about us, check back on the website and follow the Cal Creeks Instagram account!</p>
+        <p class="footnote">Interested in collaborating with us? Send us a ping! :D</p>
+    </footer>
+</body>
+</html>
+
 {% endblock %}

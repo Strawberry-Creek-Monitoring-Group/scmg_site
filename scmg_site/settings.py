@@ -39,6 +39,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'landingapp',
+    'rest_framework',
+    'scmg_site',  # Add your app here
 ]
 
 MIDDLEWARE = [
@@ -124,7 +126,6 @@ USE_TZ = True
 STATIC_URL = 'landingapp/static/'
 
 STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, 'static'),
     os.path.join(BASE_DIR, 'landingapp/static'),
 ]
 
