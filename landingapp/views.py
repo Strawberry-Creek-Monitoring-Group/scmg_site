@@ -8,10 +8,8 @@ def about(request):
     return render(request, 'about.html')
 
 def map_page(request):
-    data = NorthFork.objects.using('creek_data').all()[1:100]
+    # data = NorthFork.objects.using('creek_data').all()[1:100]
 
-    for row in data:
-        print(row)
     return render(request, 'map.html')
 
 
